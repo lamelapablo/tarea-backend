@@ -9,3 +9,26 @@ This project is a RESTful API built with **Express**, **Prisma**, and **SQLite**
 - **SQLite** – Lightweight embedded database  
 - **TypeScript** – Static typing for scalable development  
 - **Multer** – Middleware for handling multipart/form-data (image uploads)
+
+## 📦 Setup Instructions
+
+1. **Install dependencies**
+
+```bash
+npm install
+```
+
+2. **Run DB migration**
+```bash
+npx prisma migrate dev --name init
+```
+
+3. **Seed the DB (optional)**
+```bash
+npx ts-node ./prisma/seed.ts
+```
+
+3. **Start the development server**
+```bash
+npm run dev
+```

@@ -30,14 +30,14 @@ app.get('/product', async (req, res) => {
 app.post('/product', upload.single('img'), async (req, res) => {
   try {
     const { name, price, description } = req.body;
-    const imgPath: string | null = req.file ? `/images/${req.file.filename}` : null;
+    const imgPath: string | null = req.file ? `images/${req.file.filename}` : null;
 
     const newProduct: Product = await prisma.product.create({
       data: {
         name,
         price,
         description,
-        img: `images/${imgPath}`
+        img: `${imgPath}`
       }
     });
 

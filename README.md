@@ -28,7 +28,7 @@ npx prisma migrate dev --name init
 npx ts-node ./prisma/seed.ts
 ```
 
-3. **Start the development server**
+4. **Start the development server**
 ```bash
 npm run dev
 ```
